@@ -15,3 +15,17 @@ Bonus :
 - Utiliser Chat Gpt pour filtrer contenu important.
 
   
+
+## Monday 
+
+### Red Had Kyra:
+
+- Kyra Goud: https://www.linkedin.com/in/kyra-goud/?originalSubdomain=ch
+- Generative AI => Deep Learing =>  Machine Learning  =>  Artificial Intelligence
+
+
+
+
+
+
+## Open AI
