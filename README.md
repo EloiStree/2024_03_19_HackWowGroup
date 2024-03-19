@@ -22,6 +22,8 @@ Bonus :
 
 - Kyra Goud: https://www.linkedin.com/in/kyra-goud/?originalSubdomain=ch
 - Generative AI => Deep Learing =>  Machine Learning  =>  Artificial Intelligence
+  - Superviised Learning, unsupervised learning, self supervised learning
+  - LLM Large Language Model 
 
 
 
