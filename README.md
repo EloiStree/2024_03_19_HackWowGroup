@@ -24,7 +24,7 @@ Bonus :
 - Generative AI => Deep Learing =>  Machine Learning  =>  Artificial Intelligence
   - Superviised Learning, unsupervised learning, self supervised learning
   - LLM Large Language Model
-  - RAG retrieval-augmented generation
+  - LLM + RAG : retrieval-augmented generation
 
 
 
