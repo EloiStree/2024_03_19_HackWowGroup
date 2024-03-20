@@ -31,7 +31,7 @@ def main():
         model="gpt-3.5-turbo-1106",
         messages=[
             {"role": "system", "content": "Tu es un étudiant qui cherche à faire des flashcards pour mieux comprendre des mots"},
-            {"role": "user", "content": "Générer une liste de mots-clés pertinents au sujet et leurs définitions:\n " + prompt}
+            {"role": "user", "content": "Générer une liste de mots-clés pertinents au sujet et leurs définitions (simplifé) l'un apres l'autre (mots clef;definition):\n " + prompt}
         ]
     )
 
