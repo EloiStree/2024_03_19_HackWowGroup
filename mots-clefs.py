@@ -5,9 +5,9 @@ from openai import OpenAI
 
 # Fonction pour obtenir les arguments de la ligne de commande
 def obtenir_arguments():
-    parser = argparse.ArgumentParser(description="Script de création de liste de mots-clés et leurs définitions à partir d'un texte")
-    parser.add_argument("fichier_texte", help="Chemin du fichier texte contenant le contenu pour la liste de mots-clés et définitions")
-    parser.add_argument("fichier_sortie", help="Chemin du fichier de sortie pour la liste générée")
+    parser = argparse.ArgumentParser(description="Script de création de quiz à partir d'un texte")
+    parser.add_argument("fichier_texte", help="Chemin du fichier texte contenant le contenu du quiz")
+    parser.add_argument("fichier_sortie", help="Chemin du fichier de sortie pour le quiz généré")
     parser.add_argument("--api_key", help="Clé API OpenAI")
     return parser.parse_args()
 
@@ -26,19 +26,21 @@ def main():
     with open(args.fichier_texte, 'r') as file:
         prompt = file.read()
 
-    # Générer la liste de mots-clés et leurs définitions en utilisant le contenu du fichier texte
-    completion = client.completions.create(
-        engine="davinci",
-        prompt="Générer une liste de mots-clés pertinents et leurs définitions grâce au texte: \n" + prompt,
-        max_tokens=200
+    # Générer le quiz en utilisant le contenu du fichier texte
+    completion = client.chat.completions.create(
+        model="gpt-3.5-turbo-1106",
+        messages=[
+            {"role": "system", "content": "Tu es un étudiant qui cherche à faire des flashcards pour mieux comprendre des mots"},
+            {"role": "user", "content": "Générer une liste de mots-clés pertinents au sujet et leurs définitions:\n " + prompt}
+        ]
     )
 
-    # Extraire le contenu de la liste générée
-    generated_list = completion.choices[0].text.strip()
+    # Extraire le contenu du quiz généré
+    message = completion.choices[0].message.content
 
-    # Écrire la liste dans le fichier de sortie spécifié
+    # Écrire le quiz dans le fichier de sortie spécifié
     with open(args.fichier_sortie, "w") as output_file:
-        output_file.write(generated_list)
+        output_file.write(message)
 
 if __name__ == "__main__":
     main()
