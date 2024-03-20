@@ -1,6 +1,6 @@
 from openai import OpenAI
 
-api_key = "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"  # Replace this with your actual API key
+api_key = "sk-"  # Replace this with your actual API key
 client = OpenAI(api_key=api_key)
 
 audio_file= open("/home/kali/Desktop/atoutalheure.mp3", "rb")
