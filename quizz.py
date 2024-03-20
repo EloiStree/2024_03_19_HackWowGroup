@@ -17,7 +17,7 @@ def main():
     args = obtenir_arguments()
 
     # Utiliser la clé API fournie ou celle stockée dans le script
-    api_key = args.api_key if args.api_key else "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"
+    api_key = args.api_key 
 
     # Initialiser le client OpenAI
     client = OpenAI(api_key=api_key)
@@ -31,7 +31,7 @@ def main():
         model="gpt-3.5-turbo-1106",
         messages=[
             {"role": "system", "content": "Tu es un créateur de Quizz / prof qui veut verifier que des eleves on bien lu et compris un texte "},
-            {"role": "user", "content": "Compose un quizz avec le texte suivant ta reponse doit commencer par VOICI UN QUIZZ parlant du sujet: " + prompt}
+            {"role": "user", "content": "Composez un quiz contenant entre 5 et 10 questions à choix multiples (QCM), où chaque question présente 4 options de réponse parmi lesquelles une seule est correcte. À la fin du quiz, veuillez répertorier les réponses correctes pour que le professeur puisse les consulter. " + prompt}
         ]
     )
 
