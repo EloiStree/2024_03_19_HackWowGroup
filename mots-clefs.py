@@ -1,3 +1,5 @@
+## python mots-clefs.py chemin_vers_votre_fichier_texte.txt chemin_vers_votre_fichier_sortie.txt --api_key VOTRE_CLE_API
+
 import argparse
 from openai import OpenAI
 
