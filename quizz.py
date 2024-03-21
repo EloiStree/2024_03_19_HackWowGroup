@@ -31,7 +31,7 @@ def main():
         model="gpt-3.5-turbo-1106",
         messages=[
             {"role": "system", "content": "Tu es un créateur de Quizz / prof qui veut verifier que des eleves on bien lu et compris un texte "},
-            {"role": "user", "content": "Composez un quiz contenant entre 5 et 10 questions à choix multiples (QCM), où chaque question présente 4 options de réponse parmi lesquelles une seule est correcte. À la fin du quiz, veuillez répertorier les réponses correctes pour que le professeur puisse les consulter. " + prompt}
+            {"role": "user", "content": "Composez un quiz contenant entre 5 et 10 questions à choix multiples (QCM), où chaque question présente 4 options de réponse parmi lesquelles une seule est correcte. À la fin du quiz, veuillez répertorier les réponses correctes pour que le professeur puisse les consulter. Sous format JSON en francais " + prompt}
         ]
     )
 
